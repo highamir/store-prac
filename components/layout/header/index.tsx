@@ -5,7 +5,6 @@ import { Icon } from "@iconify-icon/react";
 import { usePathname } from "next/navigation";
 import { Button } from "@heroui/react";
 
-
 const links = [
   { label: "HOME", url: "/" },
   { label: "TEMPLATE", url: "/template" },
@@ -17,15 +16,15 @@ export default function MainHeader() {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <nav className="flex h-16 bg-red-50 w-full items-center  justify-between p-7">
-      <div className="flex w-8  items-center ">
+    <nav className="flex h-16 bg-content1 w-full items-center   justify-between p-7">
+      <div className="flex items-center ">
         <ul className="flex flex-row gap-6 items-center">
           {links.map((item, index) => (
             <li
               className={
                 pathname == item.url
-                  ? "text-red-700 font-medium hover:text-pink-200"
-                  : "text-black font-medium  hover:text-pink-200"
+                  ? "text-red-700 font-medium "
+                  : "text-black font-medium  hover:text-pink-600"
               }
               key={index}
             >
@@ -34,8 +33,8 @@ export default function MainHeader() {
           ))}
         </ul>
       </div>
-      <h1 className="text-black font-bold justify-self-center">SHOPY</h1>
-      <div className="flex  gap-3 ">
+        <h1 className="text-black font-bold">SHOPY</h1>
+      <div className="flex  gap-3">
         <Button isIconOnly variant="light">
           <Icon
             icon="lucide:search"
