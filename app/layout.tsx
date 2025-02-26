@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { HeroUIProvider } from "@heroui/react";
 import MainHeader from "@/components/layout/header";
+import Breadcrumb from "@/components/layout/breadcrumbs";
 
 
 const geistSans = localFont({
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <HeroUIProvider>
           <MainHeader/>
+          <Breadcrumb/>
         {children}
         </HeroUIProvider>
       </body>
