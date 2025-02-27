@@ -16,7 +16,7 @@ export default function MainHeader() {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <nav className="flex h-16 bg-content1 w-full items-center   justify-between p-7">
+    <nav className="flex h-16 bg-content1 w-full items-center mx-auto container  justify-between px-12">
       <div className="flex items-center ">
         <ul className="flex flex-row gap-6 items-center">
           {links.map((item, index) => (
