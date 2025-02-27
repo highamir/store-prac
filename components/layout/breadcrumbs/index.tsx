@@ -14,7 +14,7 @@ export default function Breadcrumb() {
         separator: "px-6",
       }}
       separator="/"
-      className="bg-content2 px-6 py-3"
+      className="bg-content2 px-12 mx-auto container py-3"
     >
       {pathname
         .split("/")
