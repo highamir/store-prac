@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { HeroUIProvider } from "@heroui/react";
 import MainHeader from "@/components/layout/header";
+import Providers from "./provider";
 import Breadcrumb from "@/components/layout/breadcrumbs";
-
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,11 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <HeroUIProvider>
+        <Providers>
           <MainHeader/>
           <Breadcrumb/>
-        {children}
-        </HeroUIProvider>
+          <main>{children}</main>
+        </Providers>
       </body>
     </html>
   );
