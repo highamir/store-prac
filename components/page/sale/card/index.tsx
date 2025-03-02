@@ -3,9 +3,9 @@ import { Button, Card, CardBody } from "@heroui/react";
 import { Icon } from "@iconify-icon/react";
 import Image from "next/image";
 
-type CardItemPropsType = { url: string };
+type CardItemPropsType = { url: string,price:number };
 
-export default function CardItem({ url }: CardItemPropsType) {
+export default function CardItem({ url,price }: CardItemPropsType) {
   return (
     <Card  className="relative rounded-lg border border-gray-200 shadow-sm">
       {/* Product Image */}
@@ -34,7 +34,7 @@ export default function CardItem({ url }: CardItemPropsType) {
       <CardBody className="p-4">
         <h3 className="text-gray-900 font-semibold">Highwaist Jeans</h3>
         <p className="text-gray-500 text-sm">Armani</p>
-        <p className="text-gray-900 font-bold mt-1">$410</p>
+        <p className="text-gray-900 font-bold mt-1">{price}</p>
       </CardBody>
     </Card>
   );
